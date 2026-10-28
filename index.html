@@ -1,0 +1,186 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CampusPrep | Student Resource Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body><header class="header">
+    <div class="logo">CampusPrep</div><nav>
+    <a href="#home">Home</a>
+    <a href="#all-papers">Question Papers</a>
+    <a href="#placement-resources">Placements</a>
+    <a href="#programming-resources">Programming</a>
+</nav>
+
+</header><main id="home"><!-- HOMEPAGE HERO -->
+<section class="hero">
+    <h1>Your Campus. Your Preparation. Your Future.</h1>
+    <p>Discover question papers, improve your coding skills and prepare for placements—all in one place.</p>
+
+    <div class="hero-buttons">
+        <a href="#all-papers" class="download-button">Explore Papers</a>
+        <a href="#placement-resources" class="download-button">Prepare for Placements</a>
+    </div>
+</section>
+
+<!-- SEARCH -->
+<section class="search-section">
+    <h2>Find Your Resources</h2>
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search programming, placement resources..."
+        oninput="searchResources()"
+    >
+</section>
+
+<!-- MAIN RESOURCE CARDS -->
+<section class="resources" id="main-resources">
+    <h2>Explore CampusPrep</h2>
+    <p>Everything you need to prepare for your academic and career goals.</p>
+
+    <div class="card-container">
+
+        <div class="card">
+            <div class="icon">📚</div>
+            <h3>University Papers</h3>
+            <p>Find semester-wise and subject-wise question papers.</p>
+            <a href="#all-papers">Explore Papers →</a>
+        </div>
+
+        <div class="card" id="placement">
+            <div class="icon">💼</div>
+            <h3>Placement Preparation</h3>
+            <p>Practice coding, aptitude and interview questions.</p>
+            <a href="#placement-resources">Start Preparing →</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">💻</div>
+            <h3>Programming</h3>
+            <p>Build your coding skills with useful learning resources.</p>
+            <a href="#programming-resources">Learn More →</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- PLACEMENT RESOURCES -->
+<section class="resources" id="placement-resources">
+    <h2>Placement Preparation</h2>
+    <p>Build your skills and prepare for your future career.</p>
+
+    <div class="card-container">
+
+        <div class="card">
+            <div class="icon">💻</div>
+            <h3>DSA Practice</h3>
+            <p>Learn data structures and algorithms for coding rounds.</p>
+            <a href="https://www.geeksforgeeks.org/"
+               target="_blank" rel="noopener noreferrer">Start Learning →</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">🗃️</div>
+            <h3>DBMS Interview Questions</h3>
+            <p>Revise database concepts and common interview topics.</p>
+            <a href="https://www.geeksforgeeks.org/dbms/"
+               target="_blank" rel="noopener noreferrer">Explore DBMS →</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">🧠</div>
+            <h3>Aptitude Practice</h3>
+            <p>Improve quantitative aptitude and logical reasoning.</p>
+            <a href="https://www.indiabix.com/"
+               target="_blank" rel="noopener noreferrer">Practice Aptitude →</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎯</div>
+            <h3>Interview Preparation</h3>
+            <p>Prepare for technical and HR interview rounds.</p>
+            <a href="https://www.interviewbit.com/"
+               target="_blank" rel="noopener noreferrer">Prepare Now →</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- PROGRAMMING RESOURCES -->
+<section class="resources" id="programming-resources">
+    <h2>Programming Resources</h2>
+    <p>Choose a language and start learning at your own pace.</p>
+
+    <div class="card-container">
+
+        <div class="card">
+            <div class="icon">🐍</div>
+            <h3>Python</h3>
+            <p>Learn Python fundamentals, syntax and practical examples.</p>
+            <a href="https://www.w3schools.com/python/"
+               target="_blank" rel="noopener noreferrer">Learn Python →</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">💻</div>
+            <h3>C++</h3>
+            <p>Study C++, functions, object-oriented programming and more.</p>
+            <a href="https://www.learncpp.com/"
+               target="_blank" rel="noopener noreferrer">Learn C++ →</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">☕</div>
+            <h3>Java</h3>
+            <p>Explore Java basics, classes, objects and programming concepts.</p>
+            <a href="https://www.w3schools.com/java/"
+               target="_blank" rel="noopener noreferrer">Learn Java →</a>
+        </div>
+
+        <div class="card">
+            <div class="icon">🌐</div>
+            <h3>Web Development</h3>
+            <p>Learn HTML, CSS and JavaScript to build websites.</p>
+            <a href="https://www.w3schools.com/"
+               target="_blank" rel="noopener noreferrer">Learn Web Development →</a>
+        </div>
+
+    </div>
+</section>
+
+</main><!-- UNIVERSITY QUESTION PAPERS --><section class="papers-section" id="all-papers">
+    <h2>University Question Papers</h2>
+    <p>Find papers by semester and subject.</p><div class="paper-filters">
+
+    <select id="semesterFilter">
+        <option value="">All Semesters</option>
+        <option value="1">Semester 1</option>
+        <option value="2">Semester 2</option>
+        <option value="3">Semester 3</option>
+        <option value="4">Semester 4</option>
+        <option value="5">Semester 5</option>
+        <option value="6">Semester 6</option>
+        <option value="7">Semester 7</option>
+        <option value="8">Semester 8</option>
+    </select>
+
+    <select id="subjectFilter">
+        <option value="">All Subjects</option>
+        <option value="DBMS">DBMS</option>
+        <option value="DSA">DSA</option>
+        <option value="OOP">OOP</option>
+        <option value="Mathematics">Mathematics</option>
+    </select>
+
+</div>
+
+<div id="paperResults">
+    <p>Select a semester or subject to explore available papers.</p>
+</div>
+
+</section><footer>
+    <p>© 2026 CampusPrep | Built for Students, by Students.</p>
+</footer><script src="script.js"></script></body>
+</html>
